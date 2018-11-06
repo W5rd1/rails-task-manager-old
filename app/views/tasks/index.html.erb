@@ -1,0 +1,8 @@
+<% @tasks.each do |task| %>
+  <h3><%= link_to task.title, task_path(task) %></h3>
+  <% if task.completed? %>
+    <input type="checkbox" x value="task[:title]">
+  <% else %>
+    <input type="checkbox" value="task[:title]">
+  <% end %>
+<% end %>
